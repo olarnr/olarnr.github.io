@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "INT107-2016 Computing Platform 2016 System Setup Project"
+date:   2017-05-14 06:50:35 +0700
+categories: INT107 project
+---
+
+Deadline: 26 May 2017 Midnight
+
+# Project Summary:
+
+Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.
+
+# Project Instructions:
+
+1. สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
+   1) เลือก _King Mongkut's University of Technology Thonburi_, _Thailand_, _Bangkok_, _IT_, ...   
+   2) ระบุบัญชี email ของคณะ   
+   3) เลือกสร้างบัญชี _AWS Educate Starter Account_   
+   4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ _verification code_ ที่ได้รับทาง email   
+   5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ   
+   6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email 'AWS Educate Application Approved' ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน
+
+2. เข้าใช้งาน AWS   
+   1) ใช้งาน AWS ผ่าน _AWS Educate Student Portal_ (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS   
+   2) ให้กด “Start Lab” และกด “OPEN CONSOLE”   
+		![Image][QWIKLABS]
+
+   3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2   
+		![Image][AWS-Services]{: .img-responsive }
+
+
+
+
+[AWS-apply]: https://www.awseducate.com/Application?apptype=student
+[QWIKLABS]: /assets/2016_INT107_Project_QWIKLABS2.png
+[AWS-Services]: /assets/2016_INT107_Project_AWS_services2.png

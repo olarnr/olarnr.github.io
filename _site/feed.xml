@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-15T20:00:59+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">INT107-2016 Computing Platform 2016 System Setup Project</title><link href="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html" rel="alternate" type="text/html" title="INT107-2016 Computing Platform 2016 System Setup Project" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/int107/project/2017/05/14/INT107-2016-project</id><content type="html" xml:base="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html">&lt;p&gt;Deadline: 26 May 2017 Midnight&lt;/p&gt;
+
+&lt;h1 id=&quot;project-summary&quot;&gt;Project Summary:&lt;/h1&gt;
+
+&lt;p&gt;Create one &lt;em&gt;Amazon EC2 t2.micro instance&lt;/em&gt; from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.&lt;/p&gt;
+
+&lt;h1 id=&quot;project-instructions&quot;&gt;Project Instructions:&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;สร้างบัญชี AWS Educate Starter Account ที่ &lt;a href=&quot;https://www.awseducate.com/Application?apptype=student&quot;&gt;&lt;em&gt;AWS Educate&lt;/em&gt;&lt;/a&gt; &lt;br /&gt;
+1) เลือก &lt;em&gt;King Mongkut’s University of Technology Thonburi&lt;/em&gt;, &lt;em&gt;Thailand&lt;/em&gt;, &lt;em&gt;Bangkok&lt;/em&gt;, &lt;em&gt;IT&lt;/em&gt;, … &lt;br /&gt;
+2) ระบุบัญชี email ของคณะ &lt;br /&gt;
+3) เลือกสร้างบัญชี &lt;em&gt;AWS Educate Starter Account&lt;/em&gt; &lt;br /&gt;
+4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ &lt;em&gt;verification code&lt;/em&gt; ที่ได้รับทาง email &lt;br /&gt;
+5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ &lt;br /&gt;
+6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;เข้าใช้งาน AWS &lt;br /&gt;
+1) ใช้งาน AWS ผ่าน &lt;em&gt;AWS Educate Student Portal&lt;/em&gt; (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS &lt;br /&gt;
+2) ให้กด “Start Lab” และกด “OPEN CONSOLE” &lt;br /&gt;
+     &lt;img src=&quot;/assets/2016_INT107_Project_QWIKLABS2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 &lt;br /&gt;
+     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_services2.png&quot; alt=&quot;Image&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Deadline: 26 May 2017 Midnight</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
