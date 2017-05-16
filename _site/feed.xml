@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-15T20:00:59+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-16T09:36:38+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">INT107-2016 Computing Platform 2016 System Setup Project</title><link href="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html" rel="alternate" type="text/html" title="INT107-2016 Computing Platform 2016 System Setup Project" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/int107/project/2017/05/14/INT107-2016-project</id><content type="html" xml:base="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html">&lt;p&gt;Deadline: 26 May 2017 Midnight&lt;/p&gt;
 
 &lt;h1 id=&quot;project-summary&quot;&gt;Project Summary:&lt;/h1&gt;
 
 &lt;p&gt;Create one &lt;em&gt;Amazon EC2 t2.micro instance&lt;/em&gt; from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;สร้าง Amazon EC2 instance โดยใช้ Amazon Linux AMI&lt;/li&gt;
+  &lt;li&gt;ติดตั้ง docker และสร้าง docker image ที่มี Apache2 โดยใช้ Ubuntu 12.04 เป็น base image&lt;/li&gt;
+  &lt;li&gt;ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;project-instructions&quot;&gt;Project Instructions:&lt;/h1&gt;
 
@@ -18,13 +24,24 @@
 6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;เข้าใช้งาน AWS &lt;br /&gt;
+    &lt;p&gt;เข้าใช้งาน AWS EC2 &lt;br /&gt;
 1) ใช้งาน AWS ผ่าน &lt;em&gt;AWS Educate Student Portal&lt;/em&gt; (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS &lt;br /&gt;
 2) ให้กด “Start Lab” และกด “OPEN CONSOLE” &lt;br /&gt;
      &lt;img src=&quot;/assets/2016_INT107_Project_QWIKLABS2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 &lt;br /&gt;
-     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_services2.png&quot; alt=&quot;Image&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_services2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;สร้าง EC2 instance
+1) กด Launch Instance &lt;br /&gt;
+     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance1.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;3) เลือก t2.micro &lt;br /&gt;
+     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance3.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;</content><author><name></name></author><summary type="html">Deadline: 26 May 2017 Midnight</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 

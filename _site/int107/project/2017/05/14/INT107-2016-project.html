@@ -83,6 +83,12 @@
 
 <p>Create one <em>Amazon EC2 t2.micro instance</em> from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.</p>
 
+<ul>
+  <li>สร้าง Amazon EC2 instance โดยใช้ Amazon Linux AMI</li>
+  <li>ติดตั้ง docker และสร้าง docker image ที่มี Apache2 โดยใช้ Ubuntu 12.04 เป็น base image</li>
+  <li>ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้</li>
+</ul>
+
 <h1 id="project-instructions">Project Instructions:</h1>
 
 <ol>
@@ -96,13 +102,24 @@
 6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน</p>
   </li>
   <li>
-    <p>เข้าใช้งาน AWS <br />
+    <p>เข้าใช้งาน AWS EC2 <br />
 1) ใช้งาน AWS ผ่าน <em>AWS Educate Student Portal</em> (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS <br />
 2) ให้กด “Start Lab” และกด “OPEN CONSOLE” <br />
      <img src="/assets/2016_INT107_Project_QWIKLABS2.png" alt="Image" /></p>
 
     <p>3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 <br />
-     <img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" class="img-responsive" /></p>
+     <img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>สร้าง EC2 instance
+1) กด Launch Instance <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance1.png" alt="Image" /></p>
+
+    <p>2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+     <img src="/assets/2016_INT107_Project_AWS_create_instance2.png" alt="Image" /></p>
+
+    <p>3) เลือก t2.micro <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance3.png" alt="Image" /></p>
   </li>
 </ol>
 

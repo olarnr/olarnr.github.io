@@ -11,6 +11,10 @@ Deadline: 26 May 2017 Midnight
 
 Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.
 
+- สร้าง Amazon EC2 instance โดยใช้ Amazon Linux AMI   
+- ติดตั้ง docker และสร้าง docker image ที่มี Apache2 โดยใช้ Ubuntu 12.04 เป็น base image   
+- ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้   
+
 # Project Instructions:
 
 1. สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
@@ -21,17 +25,29 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
    5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ   
    6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email 'AWS Educate Application Approved' ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน
 
-2. เข้าใช้งาน AWS   
+2. เข้าใช้งาน AWS EC2   
    1) ใช้งาน AWS ผ่าน _AWS Educate Student Portal_ (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS   
    2) ให้กด “Start Lab” และกด “OPEN CONSOLE”   
 		![Image][QWIKLABS]
 
    3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2   
-		![Image][AWS-Services]{: .img-responsive }
+		![Image][AWS-Services]
 
+3. สร้าง EC2 instance
+   1) กด Launch Instance   
+		![Image][AWS-create1]
+
+   2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+		![Image][AWS-create2]
+
+   3) เลือก t2.micro   
+		![Image][AWS-create3]
 
 
 
 [AWS-apply]: https://www.awseducate.com/Application?apptype=student
 [QWIKLABS]: /assets/2016_INT107_Project_QWIKLABS2.png
 [AWS-Services]: /assets/2016_INT107_Project_AWS_services2.png
+[AWS-create1]: /assets/2016_INT107_Project_AWS_create_instance1.png
+[AWS-create2]: /assets/2016_INT107_Project_AWS_create_instance2.png
+[AWS-create3]: /assets/2016_INT107_Project_AWS_create_instance3.png
