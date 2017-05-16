@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-16T09:36:38+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-16T10:52:32+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">INT107-2016 Computing Platform 2016 System Setup Project</title><link href="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html" rel="alternate" type="text/html" title="INT107-2016 Computing Platform 2016 System Setup Project" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/int107/project/2017/05/14/INT107-2016-project</id><content type="html" xml:base="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html">&lt;p&gt;Deadline: 26 May 2017 Midnight&lt;/p&gt;
 
-&lt;h1 id=&quot;project-summary&quot;&gt;Project Summary:&lt;/h1&gt;
+&lt;h2 id=&quot;project-summary&quot;&gt;Project Summary:&lt;/h2&gt;
 
 &lt;p&gt;Create one &lt;em&gt;Amazon EC2 t2.micro instance&lt;/em&gt; from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.&lt;/p&gt;
 
@@ -11,39 +11,55 @@
   &lt;li&gt;ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;project-instructions&quot;&gt;Project Instructions:&lt;/h1&gt;
+&lt;h2 id=&quot;project-instructions&quot;&gt;Project Instructions:&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;สร้างบัญชี AWS Educate Starter Account ที่ &lt;a href=&quot;https://www.awseducate.com/Application?apptype=student&quot;&gt;&lt;em&gt;AWS Educate&lt;/em&gt;&lt;/a&gt; &lt;br /&gt;
-1) เลือก &lt;em&gt;King Mongkut’s University of Technology Thonburi&lt;/em&gt;, &lt;em&gt;Thailand&lt;/em&gt;, &lt;em&gt;Bangkok&lt;/em&gt;, &lt;em&gt;IT&lt;/em&gt;, … &lt;br /&gt;
-2) ระบุบัญชี email ของคณะ &lt;br /&gt;
-3) เลือกสร้างบัญชี &lt;em&gt;AWS Educate Starter Account&lt;/em&gt; &lt;br /&gt;
-4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ &lt;em&gt;verification code&lt;/em&gt; ที่ได้รับทาง email &lt;br /&gt;
-5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ &lt;br /&gt;
-6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;เข้าใช้งาน AWS EC2 &lt;br /&gt;
-1) ใช้งาน AWS ผ่าน &lt;em&gt;AWS Educate Student Portal&lt;/em&gt; (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS &lt;br /&gt;
-2) ให้กด “Start Lab” และกด “OPEN CONSOLE” &lt;br /&gt;
-     &lt;img src=&quot;/assets/2016_INT107_Project_QWIKLABS2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-สร้างบัญชี-aws-educate-starter-account-ที่-aws-educate&quot;&gt;1. สร้างบัญชี AWS Educate Starter Account ที่ &lt;a href=&quot;https://www.awseducate.com/Application?apptype=student&quot;&gt;&lt;em&gt;AWS Educate&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;1) เลือก &lt;em&gt;King Mongkut’s University of Technology Thonburi&lt;/em&gt;, &lt;em&gt;Thailand&lt;/em&gt;, &lt;em&gt;Bangkok&lt;/em&gt;, &lt;em&gt;IT&lt;/em&gt;, … &lt;br /&gt;
+   2) ระบุบัญชี email ของคณะ &lt;br /&gt;
+   3) เลือกสร้างบัญชี &lt;em&gt;AWS Educate Starter Account&lt;/em&gt; &lt;br /&gt;
+   4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ &lt;em&gt;verification code&lt;/em&gt; ที่ได้รับทาง email &lt;br /&gt;
+   5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ &lt;br /&gt;
+   6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน&lt;/p&gt;
 
-    &lt;p&gt;3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 &lt;br /&gt;
-     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_services2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;สร้าง EC2 instance
-1) กด Launch Instance &lt;br /&gt;
-     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance1.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-เข้าใช้งาน-aws-ec2&quot;&gt;2. เข้าใช้งาน AWS EC2&lt;/h3&gt;
+&lt;p&gt;1) ใช้งาน AWS ผ่าน &lt;em&gt;AWS Educate Student Portal&lt;/em&gt; (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS &lt;br /&gt;
+   2) ให้กด “Start Lab” และกด “OPEN CONSOLE” &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_QWIKLABS2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
-     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_services2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;3) เลือก t2.micro &lt;br /&gt;
-     &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance3.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Deadline: 26 May 2017 Midnight</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;h3 id=&quot;3-สร้าง-ec2-instance&quot;&gt;3. สร้าง EC2 instance&lt;/h3&gt;
+&lt;p&gt;1) กด Launch Instance &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance1.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3) เลือก t2.micro แล้วกด Review and Launch&lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance3.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4) กด Edit security groups &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance4.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5) เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance5.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6) เลือก Edit Tags &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance6.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;7) กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance7.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;8) กด Launch เลือกสร้าง key pair ใหม่ ชื่อ ‘&lt;em&gt;id9xxx&lt;/em&gt;’ โดยให้ &lt;em&gt;xxx&lt;/em&gt; เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair &lt;strong&gt;ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server&lt;/strong&gt; &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance8.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;9) กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้ &lt;br /&gt;
+		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_instance9.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-จัดการ-ec2-instance&quot;&gt;4. จัดการ EC2 instance&lt;/h3&gt;
+&lt;p&gt;1) ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running &lt;br /&gt;
+ 		&lt;img src=&quot;/assets/2016_INT107_Project_AWS_instance_management1.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Deadline: 26 May 2017 Midnight</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/05/14/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 

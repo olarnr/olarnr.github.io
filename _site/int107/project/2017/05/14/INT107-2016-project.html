@@ -79,7 +79,7 @@
   <div class="post-content" itemprop="articleBody">
     <p>Deadline: 26 May 2017 Midnight</p>
 
-<h1 id="project-summary">Project Summary:</h1>
+<h2 id="project-summary">Project Summary:</h2>
 
 <p>Create one <em>Amazon EC2 t2.micro instance</em> from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.</p>
 
@@ -89,39 +89,55 @@
   <li>ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้</li>
 </ul>
 
-<h1 id="project-instructions">Project Instructions:</h1>
+<h2 id="project-instructions">Project Instructions:</h2>
 
-<ol>
-  <li>
-    <p>สร้างบัญชี AWS Educate Starter Account ที่ <a href="https://www.awseducate.com/Application?apptype=student"><em>AWS Educate</em></a> <br />
-1) เลือก <em>King Mongkut’s University of Technology Thonburi</em>, <em>Thailand</em>, <em>Bangkok</em>, <em>IT</em>, … <br />
-2) ระบุบัญชี email ของคณะ <br />
-3) เลือกสร้างบัญชี <em>AWS Educate Starter Account</em> <br />
-4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ <em>verification code</em> ที่ได้รับทาง email <br />
-5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ <br />
-6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน</p>
-  </li>
-  <li>
-    <p>เข้าใช้งาน AWS EC2 <br />
-1) ใช้งาน AWS ผ่าน <em>AWS Educate Student Portal</em> (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS <br />
-2) ให้กด “Start Lab” และกด “OPEN CONSOLE” <br />
-     <img src="/assets/2016_INT107_Project_QWIKLABS2.png" alt="Image" /></p>
+<h3 id="1-สร้างบัญชี-aws-educate-starter-account-ที่-aws-educate">1. สร้างบัญชี AWS Educate Starter Account ที่ <a href="https://www.awseducate.com/Application?apptype=student"><em>AWS Educate</em></a></h3>
+<p>1) เลือก <em>King Mongkut’s University of Technology Thonburi</em>, <em>Thailand</em>, <em>Bangkok</em>, <em>IT</em>, … <br />
+   2) ระบุบัญชี email ของคณะ <br />
+   3) เลือกสร้างบัญชี <em>AWS Educate Starter Account</em> <br />
+   4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ <em>verification code</em> ที่ได้รับทาง email <br />
+   5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ <br />
+   6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน</p>
 
-    <p>3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 <br />
-     <img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" /></p>
-  </li>
-  <li>
-    <p>สร้าง EC2 instance
-1) กด Launch Instance <br />
-     <img src="/assets/2016_INT107_Project_AWS_create_instance1.png" alt="Image" /></p>
+<h3 id="2-เข้าใช้งาน-aws-ec2">2. เข้าใช้งาน AWS EC2</h3>
+<p>1) ใช้งาน AWS ผ่าน <em>AWS Educate Student Portal</em> (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS <br />
+   2) ให้กด “Start Lab” และกด “OPEN CONSOLE” <br />
+		<img src="/assets/2016_INT107_Project_QWIKLABS2.png" alt="Image" /></p>
 
-    <p>2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
-     <img src="/assets/2016_INT107_Project_AWS_create_instance2.png" alt="Image" /></p>
+<p>3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 <br />
+		<img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" /></p>
 
-    <p>3) เลือก t2.micro <br />
-     <img src="/assets/2016_INT107_Project_AWS_create_instance3.png" alt="Image" /></p>
-  </li>
-</ol>
+<h3 id="3-สร้าง-ec2-instance">3. สร้าง EC2 instance</h3>
+<p>1) กด Launch Instance <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance1.png" alt="Image" /></p>
+
+<p>2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+		<img src="/assets/2016_INT107_Project_AWS_create_instance2.png" alt="Image" /></p>
+
+<p>3) เลือก t2.micro แล้วกด Review and Launch<br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance3.png" alt="Image" /></p>
+
+<p>4) กด Edit security groups <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance4.png" alt="Image" /></p>
+
+<p>5) เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance5.png" alt="Image" /></p>
+
+<p>6) เลือก Edit Tags <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance6.png" alt="Image" /></p>
+
+<p>7) กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance7.png" alt="Image" /></p>
+
+<p>8) กด Launch เลือกสร้าง key pair ใหม่ ชื่อ ‘<em>id9xxx</em>’ โดยให้ <em>xxx</em> เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair <strong>ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server</strong> <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance8.png" alt="Image" /></p>
+
+<p>9) กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้ <br />
+		<img src="/assets/2016_INT107_Project_AWS_create_instance9.png" alt="Image" /></p>
+
+<h3 id="4-จัดการ-ec2-instance">4. จัดการ EC2 instance</h3>
+<p>1) ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running <br />
+ 		<img src="/assets/2016_INT107_Project_AWS_instance_management1.png" alt="Image" /></p>
 
 
   </div>

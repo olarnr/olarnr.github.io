@@ -7,7 +7,7 @@ categories: INT107 project
 
 Deadline: 26 May 2017 Midnight
 
-# Project Summary:
+## Project Summary:
 
 Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.
 
@@ -15,9 +15,9 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
 - ติดตั้ง docker และสร้าง docker image ที่มี Apache2 โดยใช้ Ubuntu 12.04 เป็น base image   
 - ติดตั้งให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 และให้ restart docker container นี้ทุกครั้งที่ restart  instance นี้   
 
-# Project Instructions:
+## Project Instructions:
 
-1. สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
+### 1. สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
    1) เลือก _King Mongkut's University of Technology Thonburi_, _Thailand_, _Bangkok_, _IT_, ...   
    2) ระบุบัญชี email ของคณะ   
    3) เลือกสร้างบัญชี _AWS Educate Starter Account_   
@@ -25,7 +25,7 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
    5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ   
    6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email 'AWS Educate Application Approved' ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน
 
-2. เข้าใช้งาน AWS EC2   
+### 2. เข้าใช้งาน AWS EC2   
    1) ใช้งาน AWS ผ่าน _AWS Educate Student Portal_ (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS   
    2) ให้กด “Start Lab” และกด “OPEN CONSOLE”   
 		![Image][QWIKLABS]
@@ -33,15 +33,37 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
    3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2   
 		![Image][AWS-Services]
 
-3. สร้าง EC2 instance
+### 3. สร้าง EC2 instance   
    1) กด Launch Instance   
 		![Image][AWS-create1]
 
    2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
 		![Image][AWS-create2]
 
-   3) เลือก t2.micro   
+   3) เลือก t2.micro แล้วกด Review and Launch  
 		![Image][AWS-create3]
+
+   4) กด Edit security groups   
+		![Image][AWS-create4]
+
+   5) เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch   
+		![Image][AWS-create5]
+
+   6) เลือก Edit Tags   
+		![Image][AWS-create6]
+
+   7) กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch   
+		![Image][AWS-create7]
+
+   8) กด Launch เลือกสร้าง key pair ใหม่ ชื่อ '_id9xxx_' โดยให้ _xxx_ เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair **ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server**   
+		![Image][AWS-create8]
+
+   9) กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้   
+		![Image][AWS-create9]
+
+### 4. จัดการ EC2 instance 
+   1) ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running   
+ 		![Image][AWS-manage1]
 
 
 
@@ -51,3 +73,10 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
 [AWS-create1]: /assets/2016_INT107_Project_AWS_create_instance1.png
 [AWS-create2]: /assets/2016_INT107_Project_AWS_create_instance2.png
 [AWS-create3]: /assets/2016_INT107_Project_AWS_create_instance3.png
+[AWS-create4]: /assets/2016_INT107_Project_AWS_create_instance4.png
+[AWS-create5]: /assets/2016_INT107_Project_AWS_create_instance5.png
+[AWS-create6]: /assets/2016_INT107_Project_AWS_create_instance6.png
+[AWS-create7]: /assets/2016_INT107_Project_AWS_create_instance7.png
+[AWS-create8]: /assets/2016_INT107_Project_AWS_create_instance8.png
+[AWS-create9]: /assets/2016_INT107_Project_AWS_create_instance9.png
+[AWS-manage1]: /assets/2016_INT107_Project_AWS_instance_management1.png
