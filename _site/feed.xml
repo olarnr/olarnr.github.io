@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-16T12:20:16+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">INT107-2016 Computing Platform 2016 System Setup Project</title><link href="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html" rel="alternate" type="text/html" title="INT107-2016 Computing Platform 2016 System Setup Project" /><published>2017-05-14T06:50:35+07:00</published><updated>2017-05-14T06:50:35+07:00</updated><id>http://localhost:4000/int107/project/2017/05/14/INT107-2016-project</id><content type="html" xml:base="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html">&lt;p&gt;Deadline: 26 May 2017 Midnight&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-16T17:34:56+07:00</updated><id>http://localhost:4000/</id><title type="html">Olarn R. Pages</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">INT107-2016 Computing Platform 2016 System Setup Project</title><link href="http://localhost:4000/int107/project/2017/05/16/INT107-2016-project.html" rel="alternate" type="text/html" title="INT107-2016 Computing Platform 2016 System Setup Project" /><published>2017-05-16T17:30:35+07:00</published><updated>2017-05-16T17:30:35+07:00</updated><id>http://localhost:4000/int107/project/2017/05/16/INT107-2016-project</id><content type="html" xml:base="http://localhost:4000/int107/project/2017/05/16/INT107-2016-project.html">&lt;p&gt;Deadline: 26 May 2017 Midnight&lt;/p&gt;
 
 &lt;h2 id=&quot;project-summary&quot;&gt;Project Summary:&lt;/h2&gt;
 
@@ -93,8 +93,8 @@
   &lt;li&gt;ติดตั้ง docker &lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker&quot;&gt;คู่มือติดตั้ง docker&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;ตั้งค่าให้ run docker service ทุกครั้งที่เปิด instance นี้ ศึกษาแนวทางจาก&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html&quot;&gt;คู่มือติดตั้ง LAMP Server&lt;/a&gt; &lt;strong&gt;ไม่ต้องติดตั้งตามคู่มือ!&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;สร้าง docker image จาก Ubuntu 12.04 และติดตั้ง Apache2 ศึกษาได้จาก&lt;a href=&quot;http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#docker_hub_create_upload&quot;&gt;คู่มือสร้าง docker image&lt;/a&gt; หมายเหตุ: ไม่จำเป็นต้องสร้าง docker hub account และไม่ต้อง upload ขึ้น docker hub&lt;/li&gt;
-  &lt;li&gt;รับ docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ &lt;a href=&quot;https://docs.docker.com/engine/reference/run/#restart-policies---restart&quot;&gt;คู่มือการรัน docker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;ทดสอบว่า apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance&lt;/li&gt;
+  &lt;li&gt;รัน docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ &lt;a href=&quot;https://docs.docker.com/engine/reference/run/#restart-policies---restart&quot;&gt;คู่มือการรัน docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ทดสอบว่า Apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;6-upload-int106-project-to-docker-container&quot;&gt;6 upload INT106 project to docker container&lt;/h3&gt;
@@ -113,7 +113,7 @@
      &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_image2.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ใช้เวลาในการสร้าง image 
+    &lt;p&gt;กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ระบบใช้เวลาในการสร้าง image 
      &lt;img src=&quot;/assets/2016_INT107_Project_AWS_create_image3.png&quot; alt=&quot;Image&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;

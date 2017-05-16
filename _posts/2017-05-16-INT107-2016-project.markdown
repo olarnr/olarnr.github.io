@@ -5,7 +5,7 @@ date:   2017-05-16 17:30:35 +0700
 categories: INT107 project
 ---
 
-Deadline: 26 May 2017 Midnight
+Deadline: May 26, 2017 Midnight
 
 ## Project Summary:
 

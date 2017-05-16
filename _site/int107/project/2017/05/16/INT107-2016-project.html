@@ -10,7 +10,7 @@
   <meta name="description" content="Deadline: 26 May 2017 Midnight">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/int107/project/2017/05/14/INT107-2016-project.html">
+  <link rel="canonical" href="http://localhost:4000/int107/project/2017/05/16/INT107-2016-project.html">
   <link rel="alternate" type="application/rss+xml" title="Olarn R. Pages" href="/feed.xml">
   
   
@@ -69,9 +69,9 @@
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">INT107-2016 Computing Platform 2016 System Setup Project</h1>
     <p class="post-meta">
-      <time datetime="2017-05-14T06:50:35+07:00" itemprop="datePublished">
+      <time datetime="2017-05-16T17:30:35+07:00" itemprop="datePublished">
         
-        May 14, 2017
+        May 16, 2017
       </time>
       </p>
   </header>
@@ -171,8 +171,8 @@
   <li>ติดตั้ง docker <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker">คู่มือติดตั้ง docker</a></li>
   <li>ตั้งค่าให้ run docker service ทุกครั้งที่เปิด instance นี้ ศึกษาแนวทางจาก<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html">คู่มือติดตั้ง LAMP Server</a> <strong>ไม่ต้องติดตั้งตามคู่มือ!</strong></li>
   <li>สร้าง docker image จาก Ubuntu 12.04 และติดตั้ง Apache2 ศึกษาได้จาก<a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#docker_hub_create_upload">คู่มือสร้าง docker image</a> หมายเหตุ: ไม่จำเป็นต้องสร้าง docker hub account และไม่ต้อง upload ขึ้น docker hub</li>
-  <li>รับ docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">คู่มือการรัน docker</a></li>
-  <li>ทดสอบว่า apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance</li>
+  <li>รัน docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">คู่มือการรัน docker</a></li>
+  <li>ทดสอบว่า Apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance</li>
 </ol>
 
 <h3 id="6-upload-int106-project-to-docker-container">6 upload INT106 project to docker container</h3>
@@ -191,7 +191,7 @@
      <img src="/assets/2016_INT107_Project_AWS_create_image2.png" alt="Image" /></p>
   </li>
   <li>
-    <p>กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ใช้เวลาในการสร้าง image 
+    <p>กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ระบบใช้เวลาในการสร้าง image 
      <img src="/assets/2016_INT107_Project_AWS_create_image3.png" alt="Image" /></p>
   </li>
   <li>
