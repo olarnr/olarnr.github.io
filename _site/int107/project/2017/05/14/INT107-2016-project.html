@@ -91,53 +91,120 @@
 
 <h2 id="project-instructions">Project Instructions:</h2>
 
-<h3 id="1-สร้างบัญชี-aws-educate-starter-account-ที่-aws-educate">1. สร้างบัญชี AWS Educate Starter Account ที่ <a href="https://www.awseducate.com/Application?apptype=student"><em>AWS Educate</em></a></h3>
-<p>1) เลือก <em>King Mongkut’s University of Technology Thonburi</em>, <em>Thailand</em>, <em>Bangkok</em>, <em>IT</em>, … <br />
-   2) ระบุบัญชี email ของคณะ <br />
-   3) เลือกสร้างบัญชี <em>AWS Educate Starter Account</em> <br />
-   4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ <em>verification code</em> ที่ได้รับทาง email <br />
-   5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ <br />
-   6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน</p>
+<h3 id="1-สร้างบัญชี-aws-educate-starter-account-ที่-aws-educate">1 สร้างบัญชี AWS Educate Starter Account ที่ <a href="https://www.awseducate.com/Application?apptype=student"><em>AWS Educate</em></a></h3>
 
-<h3 id="2-เข้าใช้งาน-aws-ec2">2. เข้าใช้งาน AWS EC2</h3>
-<p>1) ใช้งาน AWS ผ่าน <em>AWS Educate Student Portal</em> (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS <br />
-   2) ให้กด “Start Lab” และกด “OPEN CONSOLE” <br />
-		<img src="/assets/2016_INT107_Project_QWIKLABS2.png" alt="Image" /></p>
+<ol>
+  <li>เลือก <em>King Mongkut’s University of Technology Thonburi</em>, <em>Thailand</em>, <em>Bangkok</em>, <em>IT</em>, …</li>
+  <li>ระบุบัญชี email ของคณะ</li>
+  <li>เลือกสร้างบัญชี <em>AWS Educate Starter Account</em></li>
+  <li>เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ <em>verification code</em> ที่ได้รับทาง email</li>
+  <li>เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ</li>
+  <li>เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email ‘AWS Educate Application Approved’ ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน</li>
+</ol>
 
-<p>3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 <br />
-		<img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" /></p>
+<h3 id="2-เข้าใช้งาน-aws-ec2">2 เข้าใช้งาน AWS EC2</h3>
+<ol>
+  <li>ใช้งาน AWS ผ่าน <em>AWS Educate Student Portal</em> (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS</li>
+  <li>
+    <p>ให้กด “Start Lab” และกด “OPEN CONSOLE” <br />
+     <img src="/assets/2016_INT107_Project_QWIKLABS2.png" alt="Image" /></p>
+  </li>
+  <li>ในหน้า AWS Management Console ให้เลือกไปหน้า EC2 <br />
+     <img src="/assets/2016_INT107_Project_AWS_services2.png" alt="Image" /></li>
+</ol>
 
-<h3 id="3-สร้าง-ec2-instance">3. สร้าง EC2 instance</h3>
-<p>1) กด Launch Instance <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance1.png" alt="Image" /></p>
+<h3 id="3-สร้าง-ec2-instance">3 สร้าง EC2 instance</h3>
+<ol>
+  <li>
+    <p>กด Launch Instance <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance1.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+     <img src="/assets/2016_INT107_Project_AWS_create_instance2.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>เลือก t2.micro แล้วกด Review and Launch<br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance3.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>กด Edit security groups <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance4.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance5.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>เลือก Edit Tags <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance6.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance7.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>กด Launch เลือกสร้าง key pair ใหม่ ชื่อ ‘<em>id9xxx</em>’ โดยให้ <em>xxx</em> เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair <strong>ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server</strong> <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance8.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้ <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_instance9.png" alt="Image" /></p>
+  </li>
+</ol>
 
-<p>2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
-		<img src="/assets/2016_INT107_Project_AWS_create_instance2.png" alt="Image" /></p>
-
-<p>3) เลือก t2.micro แล้วกด Review and Launch<br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance3.png" alt="Image" /></p>
-
-<p>4) กด Edit security groups <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance4.png" alt="Image" /></p>
-
-<p>5) เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance5.png" alt="Image" /></p>
-
-<p>6) เลือก Edit Tags <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance6.png" alt="Image" /></p>
-
-<p>7) กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance7.png" alt="Image" /></p>
-
-<p>8) กด Launch เลือกสร้าง key pair ใหม่ ชื่อ ‘<em>id9xxx</em>’ โดยให้ <em>xxx</em> เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair <strong>ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server</strong> <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance8.png" alt="Image" /></p>
-
-<p>9) กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้ <br />
-		<img src="/assets/2016_INT107_Project_AWS_create_instance9.png" alt="Image" /></p>
-
-<h3 id="4-จัดการ-ec2-instance">4. จัดการ EC2 instance</h3>
-<p>1) ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running <br />
+<h3 id="4-จัดการ-ec2-instance">4 จัดการ EC2 instance</h3>
+<ol>
+  <li>
+    <p>ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running <br />
  		<img src="/assets/2016_INT107_Project_AWS_instance_management1.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>เมื่อเลือก instance และกดปุ่ม Actions จะแสดงเมนูที่สามารถทำได้ หากเลือกไปที่ Instance State ระบบจะแสดงสถานะของ instance ที่สามารถเปลี่ยนได้ โดยหากไม่ได้ใช้ instance อยู่ แนะนำให้ปิด instance ด้วยการเปลี่ยนสถานะเป็น Stop เพื่อที่จะได้ไม่ต้องเสียเครดิตค่าใช้ หากต้องการลบ instance ให้เลือก Terminate<br />
+ 		<img src="/assets/2016_INT107_Project_AWS_instance_management2.png" alt="Image" /></p>
+  </li>
+</ol>
+
+<h3 id="5-ติดตั้ง-docker-และสร้าง-docker-image">5 ติดตั้ง docker และสร้าง docker image</h3>
+<ol>
+  <li>เชื่อมต่อกับ server ที่สร้างผ่านทาง ssh <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html">คู่มือเชื่อมต่อ</a></li>
+  <li>ติดตั้ง docker <a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker">คู่มือติดตั้ง docker</a></li>
+  <li>ตั้งค่าให้ run docker service ทุกครั้งที่เปิด instance นี้ ศึกษาแนวทางจาก<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html">คู่มือติดตั้ง LAMP Server</a> <strong>ไม่ต้องติดตั้งตามคู่มือ!</strong></li>
+  <li>สร้าง docker image จาก Ubuntu 12.04 และติดตั้ง Apache2 ศึกษาได้จาก<a href="http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#docker_hub_create_upload">คู่มือสร้าง docker image</a> หมายเหตุ: ไม่จำเป็นต้องสร้าง docker hub account และไม่ต้อง upload ขึ้น docker hub</li>
+  <li>รับ docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ <a href="https://docs.docker.com/engine/reference/run/#restart-policies---restart">คู่มือการรัน docker</a></li>
+  <li>ทดสอบว่า apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance</li>
+</ol>
+
+<h3 id="6-upload-int106-project-to-docker-container">6 upload INT106 project to docker container</h3>
+
+<p>ให้ศึกษาวิธี upload เข้า docker container ด้วยตนเอง ตรวจสอบว่า server แสดง page ได้</p>
+
+<h3 id="7-ส่งงาน">7 ส่งงาน</h3>
+<ol>
+  <li>Stop EC2 instance</li>
+  <li>
+    <p>สร้าง instance image โดยเลือก instance แล้วกดปุ่ม Actions -&gt; Image -&gt; Create Image
+     <img src="/assets/2016_INT107_Project_AWS_create_image1.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>ตั้งชื่อ image เป็น ‘<em>id9xxx-docker</em>’ โดยให้ <em>xxx</em> เป็นเลขท้ายสามตัวของรหัสนักศึกษา กำหนด Image description เป็นรหัสนักศึกษา <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_image2.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ใช้เวลาในการสร้าง image 
+     <img src="/assets/2016_INT107_Project_AWS_create_image3.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>ในหน้า Console เลือก Images: AMIs ระบบจะแสดงรายการ image ที่มี ให้เลือก image ที่เพิ่งสร้าง กด Actions และเลือก Modify Image Permissions <br />
+     <img src="/assets/2016_INT107_Project_AWS_create_image4.png" alt="Image" /></p>
+  </li>
+  <li>
+    <p>ในช่อง AWS Account Number ให้ระบุ <em>626235537384</em> และกดปุ่ม Add Permission และกด Save<br />
+     <img src="/assets/2016_INT107_Project_AWS_create_image5.png" alt="Image" /></p>
+  </li>
+  <li>Refresh หน้าจอ และตรวจสอบที่ Permission Tab ว่าแสดง AWS Account Number ที่เพิ่มสิทธิ์แล้ว
+     <img src="/assets/2016_INT107_Project_AWS_create_image6.png" alt="Image" /></li>
+</ol>
 
 
   </div>

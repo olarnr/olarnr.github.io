@@ -17,58 +17,101 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
 
 ## Project Instructions:
 
-### 1. สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
-   1) เลือก _King Mongkut's University of Technology Thonburi_, _Thailand_, _Bangkok_, _IT_, ...   
-   2) ระบุบัญชี email ของคณะ   
-   3) เลือกสร้างบัญชี _AWS Educate Starter Account_   
-   4) เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ _verification code_ ที่ได้รับทาง email   
-   5) เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ   
-   6) เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email 'AWS Educate Application Approved' ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน
+### 1 สร้างบัญชี AWS Educate Starter Account ที่ [_AWS Educate_][AWS-apply]   
 
-### 2. เข้าใช้งาน AWS EC2   
-   1) ใช้งาน AWS ผ่าน _AWS Educate Student Portal_ (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS   
-   2) ให้กด “Start Lab” และกด “OPEN CONSOLE”   
+1. เลือก _King Mongkut's University of Technology Thonburi_, _Thailand_, _Bangkok_, _IT_, ...   
+2. ระบุบัญชี email ของคณะ   
+3. เลือกสร้างบัญชี _AWS Educate Starter Account_   
+4. เมื่อสมัครแล้ว จะต้องยืนยัน email ด้วยการระบุ _verification code_ ที่ได้รับทาง email   
+5. เมื่อ verify email ผ่าน จะต้องรอทาง AWS สร้างบัญชีให้ โดยใช้เวลาประมาณ 3 วันทำการ   
+6. เมื่อทาง ​AWS ยืนยันการสมัคร จะได้รับ email 'AWS Educate Application Approved' ให้เปิดเอกสารแนบ และคลิ๊กไปที่ลิ้งค์ตั้งรหัสผ่าน
+
+### 2 เข้าใช้งาน AWS EC2   
+1. ใช้งาน AWS ผ่าน _AWS Educate Student Portal_ (link อยู่ใน email ที่ได้รับ) และคลิ๊กที่ “Go to your AWS Educate Starter Account” ระบบจะ redirect ไปที่หน้า QWIKLABS   
+2. ให้กด “Start Lab” และกด “OPEN CONSOLE”   
 		![Image][QWIKLABS]
 
-   3) ในหน้า AWS Management Console ให้เลือกไปหน้า EC2   
+3. ในหน้า AWS Management Console ให้เลือกไปหน้า EC2   
 		![Image][AWS-Services]
 
-### 3. สร้าง EC2 instance   
-   1) กด Launch Instance   
+### 3 สร้าง EC2 instance   
+1. กด Launch Instance   
 		![Image][AWS-create1]
 
-   2) เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
+2. เลือก Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type
 		![Image][AWS-create2]
 
-   3) เลือก t2.micro แล้วกด Review and Launch  
+3. เลือก t2.micro แล้วกด Review and Launch  
 		![Image][AWS-create3]
 
-   4) กด Edit security groups   
+4. กด Edit security groups   
 		![Image][AWS-create4]
 
-   5) เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch   
+5. เลือกสร้าง security group ใหม่ ตั้งชื่อเป็น WebServer และกด Add Rule เพิ่ม http แล้วกด Review and Launch   
 		![Image][AWS-create5]
 
-   6) เลือก Edit Tags   
+6. เลือก Edit Tags   
 		![Image][AWS-create6]
 
-   7) กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch   
+7. กด Add Tag เพิ่ม Tag ชื่อ Name ตั้งชื่อเป็น Docker: Apache Server แล้วกด Review and Launch   
 		![Image][AWS-create7]
 
-   8) กด Launch เลือกสร้าง key pair ใหม่ ชื่อ '_id9xxx_' โดยให้ _xxx_ เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair **ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server**   
+8. กด Launch เลือกสร้าง key pair ใหม่ ชื่อ '_id9xxx_' โดยให้ _xxx_ เป็นเลขท้ายสามตัวของรหัสนักศึกษา แล้วกด Download Key Pair **ต้องใช้ Key Pair นี้ในการเข้าถึงตัว server**   
 		![Image][AWS-create8]
 
-   9) กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้   
+9. กด Launch Instance หากสร้างสำเร็จ จะแสดงรูปดังนี้   
 		![Image][AWS-create9]
 
-### 4. จัดการ EC2 instance 
-   1) ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running   
+### 4 จัดการ EC2 instance 
+1. ที่หน้า EC2 Console เลือก Instances หากสร้าง instance สำเร็จ จะแสดงรายการ instance ที่สร้างใหม่ โดยจะอยู่ในสถานะ running   
  		![Image][AWS-manage1]
+
+2. เมื่อเลือก instance และกดปุ่ม Actions จะแสดงเมนูที่สามารถทำได้ หากเลือกไปที่ Instance State ระบบจะแสดงสถานะของ instance ที่สามารถเปลี่ยนได้ โดยหากไม่ได้ใช้ instance อยู่ แนะนำให้ปิด instance ด้วยการเปลี่ยนสถานะเป็น Stop เพื่อที่จะได้ไม่ต้องเสียเครดิตค่าใช้ หากต้องการลบ instance ให้เลือก Terminate  
+ 		![Image][AWS-manage2]
+
+### 5 ติดตั้ง docker และสร้าง docker image
+1. เชื่อมต่อกับ server ที่สร้างผ่านทาง ssh [คู่มือเชื่อมต่อ][AWS-accessinginstances]   
+2. ติดตั้ง docker [คู่มือติดตั้ง docker][AWS-installdockerguide]   
+3. ตั้งค่าให้ run docker service ทุกครั้งที่เปิด instance นี้ ศึกษาแนวทางจาก[คู่มือติดตั้ง LAMP Server][AWS-installLAMPguide] **ไม่ต้องติดตั้งตามคู่มือ!**   
+4. สร้าง docker image จาก Ubuntu 12.04 และติดตั้ง Apache2 ศึกษาได้จาก[คู่มือสร้าง docker image][AWS-createdockerimage] หมายเหตุ: ไม่จำเป็นต้องสร้าง docker hub account และไม่ต้อง upload ขึ้น docker hub
+5. รับ docker image ที่สร้าง โดยกำหนดให้รันทุกครั้งที่เปิด instance นี้ [คู่มือการรัน docker][docker-run]
+6. ทดสอบว่า apache server บน docker ทำงานอยู่ โดยไปที่ public IP ของ EC2 instance
+
+### 6 upload INT106 project to docker container
+
+ให้ศึกษาวิธี upload เข้า docker container ด้วยตนเอง ตรวจสอบว่า server แสดง page ได้
+
+### 7 ส่งงาน
+1. Stop EC2 instance
+2. สร้าง instance image โดยเลือก instance แล้วกดปุ่ม Actions -> Image -> Create Image
+		![Image][AWS-createimage1]  
+
+3. ตั้งชื่อ image เป็น '_id9xxx-docker_' โดยให้ _xxx_ เป็นเลขท้ายสามตัวของรหัสนักศึกษา กำหนด Image description เป็นรหัสนักศึกษา   
+		![Image][AWS-createimage2]  
+
+4. กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ใช้เวลาในการสร้าง image 
+		![Image][AWS-createimage3]  
+
+5. ในหน้า Console เลือก Images: AMIs ระบบจะแสดงรายการ image ที่มี ให้เลือก image ที่เพิ่งสร้าง กด Actions และเลือก Modify Image Permissions   
+		![Image][AWS-createimage4]  
+
+6. ในช่อง AWS Account Number ให้ระบุ _626235537384_ และกดปุ่ม Add Permission และกด Save  
+		![Image][AWS-createimage5]  
+
+7. Refresh หน้าจอ และตรวจสอบที่ Permission Tab ว่าแสดง AWS Account Number ที่เพิ่มสิทธิ์แล้ว
+		![Image][AWS-createimage6]  
 
 
 
 [AWS-apply]: https://www.awseducate.com/Application?apptype=student
 [QWIKLABS]: /assets/2016_INT107_Project_QWIKLABS2.png
+[AWS-accessinginstances]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html
+[AWS-installdockerguide]: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#install_docker
+[AWS-installLAMPguide]: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html
+[AWS-createdockerimage]: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#docker_hub_create_upload
+[docker-run]: https://docs.docker.com/engine/reference/run/#restart-policies---restart
+
+
 [AWS-Services]: /assets/2016_INT107_Project_AWS_services2.png
 [AWS-create1]: /assets/2016_INT107_Project_AWS_create_instance1.png
 [AWS-create2]: /assets/2016_INT107_Project_AWS_create_instance2.png
@@ -80,3 +123,11 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux AMI. Install docker 
 [AWS-create8]: /assets/2016_INT107_Project_AWS_create_instance8.png
 [AWS-create9]: /assets/2016_INT107_Project_AWS_create_instance9.png
 [AWS-manage1]: /assets/2016_INT107_Project_AWS_instance_management1.png
+[AWS-manage2]: /assets/2016_INT107_Project_AWS_instance_management2.png
+[AWS-createimage1]: /assets/2016_INT107_Project_AWS_create_image1.png
+[AWS-createimage2]: /assets/2016_INT107_Project_AWS_create_image2.png
+[AWS-createimage3]: /assets/2016_INT107_Project_AWS_create_image3.png
+[AWS-createimage4]: /assets/2016_INT107_Project_AWS_create_image4.png
+[AWS-createimage5]: /assets/2016_INT107_Project_AWS_create_image5.png
+[AWS-createimage6]: /assets/2016_INT107_Project_AWS_create_image6.png
+
