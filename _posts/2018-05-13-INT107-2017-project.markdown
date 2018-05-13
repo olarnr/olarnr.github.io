@@ -11,10 +11,8 @@ Deadline: May 27, 2018 Midnight
 
 Create one _Amazon EC2 t2.micro instance_ from Amazon Linux 2 AMI. Configure it as a Web server that support secure connection(SSL/TLS). Host your INT106 project or a page that contain your student id and your name.
 
-Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.
-
 - สร้าง Amazon EC2 instance โดยใช้ Amazon Linux 2 AMI   
-- ติดตั้ง Apache2 server และตั้งค่าให้ใช้งาน SSL/TLS(https)
+- ติดตั้ง Apache2 server และตั้งค่าให้ใช้งาน SSL/TLS (https)
 - ตั้งค่าให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 หรือหน้าเวบที่แสดงชื่อและรหัสนักศึกษาของตนเอง
 
 ## Project Details:
@@ -23,14 +21,14 @@ Install docker and create docker image with Apache2 from Ubuntu 12.04 base image
 2. กำหนด Security Rule ให้รองรับ ssh และ https
 3. ติดตั้ง httpd หรือ nginx โดยให้เรียก service ทุกครั้งที่มีการ boot instance
 4. ตั้งค่าให้รองรับ SSL/TLS โดยไม่จำเป็นต้องขอ CA-signed Certificate
-5. ทดสอบความปลอดภัยที่ [_Qualys SSL Labs_][Qualys-test] โดยให้คะแนน Protocol Support 100% ค่า Key Exchange และ Cipher Strength คะแนน 95% ขึ้นไป ดังรูป
+5. ทดสอบความปลอดภัยที่ [_Qualys SSL Labs_][Qualys-test] โดยให้ได้คะแนน Protocol Support 100% Key Exchange และ Cipher Strength 95% ขึ้นไป ดังรูป
 		![Image][Qualys-Result]
 6. นำเข้า web pages ของโปรเจคในวิชา INT106 หรือหน้าเวบที่แสดงชื่อและรหัสนักศึกษาของตนเอง
 7. ทดสอบด้วยการ reboot instance และเข้าถึงผ่าน https
 
 หมายเหตุ:
 * ไม่ต้องติดตั้ง php, mySQL หรือโปรแกรมอื่นๆที่ไม่จำเป็น
-* ไม่ต้องใช้ elastic ip
+* ไม่ต้องใช้ elastic IP
 * การกำหนด SSLCipherSuite และ SSLProxyCipherSuite ต้องดูค่าไม่ให้มีช่องไฟและทำเป็นบรรทัดเดียว(รวมมีเพียง 2 บรรทัด) [Each of these two directives must be on a single line without spaces between the cipher names.]
 
 ## การส่งงาน
