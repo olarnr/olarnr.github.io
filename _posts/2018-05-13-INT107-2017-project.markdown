@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "INT107-2017 Computing Platform 2017 System Setup Project"
+date:   2018-05-13 19:30:35 +0700
+categories: INT107 project
+---
+
+Deadline: May 27, 2018 Midnight
+
+## Project Summary:
+
+Create one _Amazon EC2 t2.micro instance_ from Amazon Linux 2 AMI. Configure it as a Web server that support secure connection(SSL/TLS). Host your INT106 project or a page that contain your student id and your name.
+
+Install docker and create docker image with Apache2 from Ubuntu 12.04 base image. Setup the web server in docker container to host your INT106 project and restart the container every time the instance is restarted.
+
+- สร้าง Amazon EC2 instance โดยใช้ Amazon Linux 2 AMI   
+- ติดตั้ง Apache2 server และตั้งค่าให้ใช้งาน SSL/TLS(https)
+- ตั้งค่าให้ Apache2 server แสดงงานโปรเจคในวิชา INT106 หรือหน้าเวบที่แสดงชื่อและรหัสนักศึกษาของตนเอง
+
+## Project Details:
+
+1. สร้าง Amazon EC2 instance ใหม่ โดยใช้ Amazon Linux 2 AMI
+2. กำหนด Security Rule ให้รองรับ ssh และ https
+3. ติดตั้ง httpd หรือ nginx โดยให้เรียก service ทุกครั้งที่มีการ boot instance
+4. ตั้งค่าให้รองรับ SSL/TLS โดยไม่จำเป็นต้องขอ CA-signed Certificate
+5. ทดสอบความปลอดภัยที่ [_Qualys SSL Labs_][Qualys-test] โดยให้คะแนน Protocol Support 100% ค่า Key Exchange และ Cipher Strength คะแนน 95% ขึ้นไป ดังรูป
+		![Image][Qualys-Result]
+6. นำเข้า web pages ของโปรเจคในวิชา INT106 หรือหน้าเวบที่แสดงชื่อและรหัสนักศึกษาของตนเอง
+7. ทดสอบด้วยการ reboot instance และเข้าถึงผ่าน https
+
+หมายเหตุ:
+* ไม่ต้องติดตั้ง php, mySQL หรือโปรแกรมอื่นๆที่ไม่จำเป็น
+* ไม่ต้องใช้ elastic ip
+* การกำหนด SSLCipherSuite และ SSLProxyCipherSuite ต้องดูค่าไม่ให้มีช่องไฟและทำเป็นบรรทัดเดียว(รวมมีเพียง 2 บรรทัด) [Each of these two directives must be on a single line without spaces between the cipher names.]
+
+## การส่งงาน
+1. Stop EC2 instance
+2. สร้าง instance image โดยเลือก instance แล้วกดปุ่ม Actions -> Image -> Create Image
+		![Image][AWS-createimage1]  
+
+3. ตั้งชื่อ image เป็น '_id60xxx-https_' โดยให้ _xxx_ เป็นเลขท้ายสามตัวของรหัสนักศึกษา กำหนด Image description เป็นรหัสนักศึกษา   
+
+4. กดสร้าง image เมื่อสำเร็จจะแสดงหน้าต่างดังรูป หมายเหตุ: ระบบใช้เวลาในการสร้าง image 
+		![Image][AWS-createimage3]  
+
+5. ในหน้า Console เลือก Images: AMIs ระบบจะแสดงรายการ image ที่มี ให้เลือก image ที่เพิ่งสร้าง กด Actions และเลือก Modify Image Permissions   
+		![Image][AWS-createimage4]  
+
+6. ในช่อง AWS Account Number ให้ระบุ _626235537384_ และกดปุ่ม Add Permission และกด Save  
+		![Image][AWS-createimage5]  
+
+7. Refresh หน้าจอ และตรวจสอบที่ Permission Tab ว่าแสดง AWS Account Number ที่เพิ่มสิทธิ์แล้ว
+		![Image][AWS-createimage6]  
+
+
+## Links ที่เป็นประโยชน์
+1. [_Install a LAMP Web Server on Amazon Linux 2_][AWS-LAMP-Tutorial]
+2. [_Configure Apache Web Server on Amazon Linux 2 to Use SSL/TLS_][AWS-TSL-Tutorial]
+
+[Qualys-test]: https://www.ssllabs.com/ssltest/analyze.html
+[AWS-LAMP-Tutorial]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
+[AWS-TSL-Tutorial]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-an-instance.html
+
+[Qualys-Result]: /assets/2017_INT107_Project_AWS_create_image1_small.png
+[AWS-createimage1]: /assets/2016_INT107_Project_AWS_create_image1.png
+[AWS-createimage2]: /assets/2016_INT107_Project_AWS_create_image2.png
+[AWS-createimage3]: /assets/2016_INT107_Project_AWS_create_image3.png
+[AWS-createimage4]: /assets/2016_INT107_Project_AWS_create_image4.png
+[AWS-createimage5]: /assets/2016_INT107_Project_AWS_create_image5.png
+[AWS-createimage6]: /assets/2016_INT107_Project_AWS_create_image6.png
+
