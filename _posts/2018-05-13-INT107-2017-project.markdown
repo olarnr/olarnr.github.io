@@ -21,7 +21,7 @@ Create one _Amazon EC2 t2.micro instance_ from Amazon Linux 2 AMI. Configure it 
 2. กำหนด Security Rule ให้รองรับ ssh และ https
 3. ติดตั้ง httpd หรือ nginx โดยให้เรียก service ทุกครั้งที่มีการ boot instance
 4. ตั้งค่าให้รองรับ SSL/TLS โดยไม่จำเป็นต้องขอ CA-signed Certificate
-5. ทดสอบความปลอดภัยที่ [_Qualys SSL Labs_][Qualys-test] โดยให้ได้คะแนน Protocol Support 100% Key Exchange และ Cipher Strength 95% ขึ้นไป ดังรูป
+5. ทดสอบความปลอดภัยที่ [_Qualys SSL Labs_][Qualys-test] โดยให้ได้คะแนน Protocol Support 100% Key Exchange และ Cipher Strength 90% ขึ้นไป ดังรูป
 		![Image][Qualys-Result]
 6. นำเข้า web pages ของโปรเจคในวิชา INT106 หรือหน้าเวบที่แสดงชื่อและรหัสนักศึกษาของตนเอง
 7. ทดสอบด้วยการ reboot instance และเข้าถึงผ่าน https
